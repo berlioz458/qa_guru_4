@@ -1,10 +1,18 @@
 package guru.qa;
 
 public class Review {
-    private int rate = 0;
-    private String comment = "";
-    private boolean published = false;
+    private int rate;
+    private String comment;
+    private boolean published;
 
+    public Review(int rate, String comment) {
+        this.rate = rate;
+        this.comment = comment;
+    }
+
+    public String getReviewInfo(){
+        return "{ rate: " + this.rate + ", comment: " + this.comment + ", published: " + this.published + " }";
+    }
 
     public int getRate() {
         return rate;
